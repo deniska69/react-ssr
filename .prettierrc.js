@@ -2,7 +2,7 @@ import { prettier } from '@parabit/prettier';
 
 export default {
 	...prettier,
-	plugins: ['prettier-plugin-tailwindcss', '@ianvs/prettier-plugin-sort-imports'],
+	plugins: ['@ianvs/prettier-plugin-sort-imports'],
 	importOrder: [
 		'^react$',
 		'<THIRD_PARTY_MODULES>',
