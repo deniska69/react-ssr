@@ -1,9 +1,13 @@
 /** Этот файл содержит базовую конфигурацию для клиентского и серверного комплекта */
 
 import path from 'node:path';
+import tailwindcss from '@tailwindcss/postcss';
+
+import postcssPlugin from './plugins/postcss.js';
 
 // Working dir
 const workspace = process.cwd();
+
 // Server bundle configuration
 export const serverConfig = {
 	bundle: true,
@@ -29,7 +33,12 @@ export const clientConfig = {
 	tsconfig: path.join(workspace, 'tsconfig.json'),
 	entryPoints: {
 		index: path.join(workspace, 'src', 'index.tsx'), // Client react app
-		style: path.join(workspace, 'src', 'style.css'), // Stylesheet
+		style: path.join(workspace, 'src', 'index.css'), // Stylesheet
 	},
-	outdir: path.join(workspace, 'dist', 'static'), // Served as /static by express
+	outdir: path.join(workspace, 'dist', 'static'), // Served as /static by express,
+	plugins: [
+		postcssPlugin({
+			plugins: [tailwindcss],
+		}),
+	],
 };

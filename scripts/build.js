@@ -9,11 +9,13 @@ async function bundle() {
 		...serverConfig,
 		minify: true,
 	});
+
 	// Build client
 	await build({
 		...clientConfig,
 		minify: true,
 	});
 }
+
 // Start the build process
 bundle();
