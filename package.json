@@ -1,0 +1,30 @@
+{
+  "name": "react-ssr",
+  "version": "0.0.1",
+  "type": "module",
+  "repository": "https://github.com/deniska69/react-ssr.git",
+  "author": "deniska69 <gostev.dy@yandex.ru>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build",
+    "dev": "node scripts/dev",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.4.0"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "@parabit/prettier": "^0.0.5",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.14",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "esbuild": "^0.25.1",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  }
+}
