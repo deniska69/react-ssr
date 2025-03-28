@@ -5,7 +5,7 @@ import express, { type Request, type Response } from 'express';
 import { renderToPipeableStream } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 
-import App from './App/App';
+import App from './App';
 
 const app = express(); // Create Express App
 const port = 3000; // Port to listen
